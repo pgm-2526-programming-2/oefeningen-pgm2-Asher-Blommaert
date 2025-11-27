@@ -156,3 +156,11 @@ const totalPriceProducts = products.reduce((prevValue, currentValue) => {
     return prevValue + currentValue.price;
 })
 console.log(totalPriceProducts);
+
+
+const num = [5, 8, 1, 3];
+num.sort((a, b) => {
+    return a - b;
+});
+
+//a, b = 5, 8 --> indien negatieve waarde: 5, 8 indien positief: 8, 5
