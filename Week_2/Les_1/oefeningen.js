@@ -146,9 +146,125 @@ function getResult(ar1, ar2) {
 }
 console.log(getResult(numbers1, numbers2));
 
-//oef9
+//oef9    reduce met if else
 let woordenArray = ['appel', 'peer', 'kiwi', 'banaan'];
-let langsteWoord = console.log(langsteWoord); 
+// let langsteWoord = console.log(langsteWoord); 
+
 // schrijf hier de logica om het langste woord te vinden 
 // geeft 'banaan'
 
+const longestWord = woordenArray.reduce((prevValue, currentValue) => {
+    if (prevValue.length > currentValue.length) {
+        return prevValue;
+    }
+
+    return currentValue;
+});
+console.log(longestWord);
+
+
+
+//oef10    filter in function    ??
+function filterEvenGetallen(getallen) {
+    // Implementeer de logica hier
+    const filteredEvenNumbers = getallen.filter((value) => {
+        return value % 2 === 0;
+    });
+}
+
+let randomNumbers = [3, 8, 15, 6, 10, 7];
+let evenGetallen = filterEvenGetallen(randomNumbers);
+console.log(evenGetallen); // geeft [8, 6, 10]
+
+
+
+//oef11  ??
+function sorterenOpEigenschap(objecten, eigenschap) {
+    // Implementeer de logica hier
+    objectenArray.sort((objecten, eigenschap) => objecten.leeftijd - eigenschap.leeftijd);
+    
+}
+let objectenArray = [
+    { naam: 'Anna', leeftijd: 30 },
+    { naam: 'Bob', leeftijd: 25 },
+    { naam: 'Charlie', leeftijd: 35 },
+];
+console.log(sorterenOpEigenschap(objectenArray, 'leeftijd'));
+
+
+//OBJECTEN
+
+//oef1
+const auto = {
+    merk: "Toyota",
+    model: "Camry",
+    jaar: 2022,
+    kleur: "Blauw"
+}
+auto.kleur = "Rood";
+console.log(auto.merk);
+auto.brandstof = "Benzine";
+
+
+//oef2
+const persoon = {
+    naam: "Anna",
+    leeftijd: 25,
+    adres: {
+        straat: "Hoofdstraat",
+        nummer: 123,
+        stad: "Stadsville"
+    }
+}
+console.log(persoon.adres);
+persoon.telefoon = +32458693214;
+persoon.extraInfo = {
+    hobby: "Petanque",
+    favorieteKleur: "Zwart"
+}
+
+//oef3   ??
+function zijnObjectenIdentiek(obj1, obj2) {
+    // Implementeer de logica hier
+    
+}
+
+const objectA = { a: 1, b: 2, c: 3 };
+const objectB = { a: 1, b: 2, c: 3 };
+
+console.log(zijnObjectenIdentiek(objectA, objectB)); // true
+
+
+
+//oef4
+const shoppingCartAlt = {
+    item1: { name: "Product 1", price: 20 },
+    item2: { name: "Product 2", price: 30 },
+    item3: { name: "Product 3", price: 15 },
+};
+
+// Gebruik Object.keys() om de namen van de items weer te geven
+const itemNames = Object.keys(shoppingCartAlt)  // vul hier aan
+console.log("Namen van items:", itemNames);
+
+// Gebruik Object.values() om de prijzen van de items weer te geven
+const itemPrices = Object.values(shoppingCartAlt)    // vul hier aan
+console.log("Prijzen van items:", itemPrices);
+
+// Gebruik Object.entries() om zowel de namen als prijzen van de items weer te geven
+const itemEntries = Object.entries(shoppingCartAlt)    // vul hier aan
+console.log("Namen en prijzen van items:", itemEntries);
+
+const shoppingCartSecondAlt = {
+    items: [
+        { name: "Product 1", price: 20 },
+        { name: "Product 2", price: 30 },
+        { name: "Product 3", price: 15 },
+    ],
+
+    // Aangepaste methode om totale prijs te berekenen
+    calculateTotal: function () {
+        // vul hier aan
+        
+    },
+};
