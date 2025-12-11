@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Lasagne",
+        "ingredients": ["Pasta", "Kaas", "Gehakt", "Tomatensaus"]
+    },
+    {
+        "name": "Pizza",
+        "ingredients": ["Kaas", "Deeg", "Rucola", "Burrata"]
+    }
+]
